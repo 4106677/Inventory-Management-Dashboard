@@ -16,6 +16,7 @@ import {useAppDispatch, useAppSelector} from "@/app/redux";
 import {setIsSidebarCollapsed} from "@/state";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 interface SidebarLinkProps {
 	href: string;
@@ -63,7 +64,7 @@ const Sidebar = () => {
 			{/* TOP LOGO */}
 			<div
 				className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed ? "px-5" : "px-8"}`}>
-				<div className="">logo</div>
+				<Image src='https://s3-inventorymanagement-api.s3.eu-north-1.amazonaws.com/logo.png' alt='adstock-logo' width={50} height={50} className='rounded w-8' />
 				<h1 className={`font-extrabold text-2xl ${isSidebarCollapsed ? "hidden" : "block"}`}>EDSTOCK</h1>
 
 				<button className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
